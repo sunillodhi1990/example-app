@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\StudentajaxController;
+use App\Http\Controllers\ExcelImportController;
+
+
 use App\Models\Collage;
 use App\Models\Course;
 
@@ -41,3 +44,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+ Route::get('import-excel', [ExcelImportController::class, 'index'])->name('import.excel');
+Route::post('import-excel', [ExcelImportController::class, 'import']);
+
