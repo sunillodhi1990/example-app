@@ -14,11 +14,14 @@
                         <h5 class="text-dark text-center">Only Laravel  CRUD operation</h5>
                     </div>
                     <div class="row">
-                        <div class="col-sm-6">
+                        <div class="col-sm-3">
                             <h2>Manage <b>Student</b></h2>
                         </div>
                         <div class="col-sm-3">
                             <a href="{{url('/')}}" class="btn btn-success" ><i class="material-icons">&#xE147;</i> <span>Add New student Ajax</span></a>
+                        </div>
+                        <div class="col-sm-3">
+                            <a href="{{url('import-excel')}}" class="btn btn-success" ><i class="material-icons">&#xE147;</i> <span>Uploads Exel Larave</span></a>
                         </div>
                         <div class="col-sm-3">
                             <a href="{{url('students')}}" class="btn btn-success" ><i class="material-icons">&#xE147;</i> <span>Add New student Laravel</span></a>
