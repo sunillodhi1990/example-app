@@ -105,6 +105,9 @@ export default function Login() {
             <a className="underlineHover" href="#">
               Forgot Password?
             </a>
+            <a className="underlineHover" href="/register">
+              User Signup?
+            </a>
           </div>
         </div>
       </div>

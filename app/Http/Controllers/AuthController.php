@@ -15,7 +15,7 @@ class AuthController extends Controller
        $validator = Validator::make($request->all(), [
         'name' => 'required|string|max:255',
         'email' => 'required|email|unique:users,email',
-        'password' => 'required|string|min:8',
+        'password' => 'required|string|min:6',
     ]);
 
     // If validation fails, return a JSON response with validation errors
@@ -31,13 +31,8 @@ class AuthController extends Controller
     ]);
 
     $success['token'] = $user->createToken('MyApp')->plainTextToken;
-    $success['name']  = $user->name;
-
-
-    // Create a token for the user
-    $token = $user->createToken('AppToken')->accessToken;
-
-    // Return a JSON response with the token
+    $success['name']  = $user->name;   
+    
     return response()->json(['status' => true,'data'=>$success,'message'=>'User register Successfully'], 201);
 
     }
